@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 	  
 	  Logger log = LoggerFactory.getLogger(LoadInitialDatabase.class);
 		 
-	  @Bean
+	  // bean issue 
 	  CommandLineRunner initDatabase(UserRepository repository) {
 		  //blank it first 
 		  repository.deleteAll();
