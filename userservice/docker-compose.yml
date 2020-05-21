@@ -1,0 +1,15 @@
+version: "3"
+services:
+  api-database:
+    image: mongo:3.2.4
+    container_name: "api-database"
+    ports:
+      - 27017:27017
+  api:
+    image: springio/gs-spring-boot-docker
+    container_name: "gs-spring-boot-docker"
+    ports:
+      - 8080:8080
+    links:
+      - api-database
+    
